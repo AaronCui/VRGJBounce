@@ -22,11 +22,11 @@ public class moveWithHead : MonoBehaviour {
 		rotationy = (float)head.transform.localEulerAngles.y;
 		rotationx = (float)head.transform.localEulerAngles.x;
 		if (rotationx < 360 && rotationx > 320){
-			gameObject.transform.position = new Vector3 (transform.position.x, (-(rotationx - 360f)/30f) + 1f, transform.position.z );
+			gameObject.transform.position = new Vector3 (transform.position.x, (-(rotationx - 360f)/18f) + 1f, transform.position.z );
 		}
-		else if (rotationx < 360 && rotationx > 320){
-			gameObject.transform.position = new Vector3 (transform.position.x, (-(rotationx - 360f)/30f) + 1f, transform.position.z );
-		}
+		//else if (rotationx < 360 && rotationx > 320){
+		//	gameObject.transform.position = new Vector3 (transform.position.x, (-(rotationx - 360f)/30f) + 1f, transform.position.z );
+		//}
 
 		if (rotationy > 0 && rotationy < 60) {
 				gameObject.transform.position = new Vector3 ((rotationy / 60.0f)*2f, transform.position.y, transform.position.z);

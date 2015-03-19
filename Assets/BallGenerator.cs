@@ -43,7 +43,7 @@ public class BallGenerator : MonoBehaviour {
 		scaler = -2f / direction.z;
 
 		GameObject Ball = (GameObject) Instantiate (tmp, spawnpt, transform.localRotation);
-		Ball.rigidbody.velocity = direction*(-2f);
+		Ball.GetComponent<Rigidbody>().velocity = direction*(-2f);
 		 
 		
 		}

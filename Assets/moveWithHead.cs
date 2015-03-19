@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class moveWithHead : MonoBehaviour {
@@ -17,7 +17,7 @@ public class moveWithHead : MonoBehaviour {
 	void Update () {
 		//Debug.Log(head.transform.localRotation.y);
 		//print (transform.localEulerAngles.y)
-		Debug.Log(head.transform.localEulerAngles.y);
+		//Debug.Log(head.transform.localEulerAngles.y);
 		// scaling range : -1 to 1
 		rotationy = (float)head.transform.localEulerAngles.y;
 		rotationx = (float)head.transform.localEulerAngles.x;

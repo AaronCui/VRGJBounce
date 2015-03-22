@@ -30,15 +30,15 @@ public class BallGenerator : MonoBehaviour {
 				timeDelay *= 0.8f;  
 				counter = 0;
 			}
-		randomX = Random.Range (-2f, 2f);
+		randomX = Random.Range (-20f, 20f);
 		randomZ = Random.Range (15f, 30f);
-		randomY = Random.Range (0.5f, 5f);
-		randXtarget = Random.Range (-2f, 2f);
+		randomY = Random.Range (0.5f, 20f);
+		randXtarget = Random.Range (-1.3f, 1.3f);
 		randZtarget = Random.Range (0.5f, 2f);
 		
 		target = new Vector3(randXtarget, 1.2f, randZtarget);
 		spawnpt = new Vector3(randomX,randomY,randomZ);
-		direction = -(target - spawnpt);
+		direction = spawnpt - target;
 			Debug.Log(direction);
 		scaler = -2f / direction.z;
 

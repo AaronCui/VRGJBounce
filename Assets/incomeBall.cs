@@ -4,7 +4,7 @@ using System.Collections;
 public class incomeBall : MonoBehaviour {
 
 	private float dt;
-	private float TIMELIMIT = 10.0f;
+	private float TIMELIMIT = 5.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -20,4 +20,7 @@ public class incomeBall : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	}
+
+
+
 }

@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class textController : MonoBehaviour {
-
+	
 	private float dt;
 	private string tmp;
-
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -17,12 +17,12 @@ public class textController : MonoBehaviour {
 		dt += Time.deltaTime;
 		tmp = "";
 		tmp += dt;
-		textChange (tmp);
+		//textChange (tmp);
 	}
-
+	
 	public void textChange(string str){
-
+		
 		gameObject.GetComponent<TextMesh> ().text = str;
 	}
-
+	
 }

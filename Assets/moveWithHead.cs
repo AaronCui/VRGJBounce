@@ -5,8 +5,10 @@ public class moveWithHead : MonoBehaviour {
 
 	public GameObject prefab;
 	public GameObject head;
+	public GameObject text;
 
-	private int score, life; 
+	public int score, life; 
+	private string scoretext;
 	// Use this for initialization
 	void Start () {
 		head = GameObject.FindGameObjectWithTag ("headVR");
@@ -47,9 +49,15 @@ public class moveWithHead : MonoBehaviour {
 		Debug.Log ("lalalala");
 		if (collision.collider.name == "leBall(Clone)"){
 			score++;
-			Debug.Log ("omgomg");
 			Debug.Log (score);
 		}
+		if (collision.collider.name == "grassball(Clone)"){
+			Application.LoadLevel(1);
+			score--;
+			Debug.Log ("hit a grass bro");
+		}
+		scoretext = "Your Current Score: " + score;
+		text.GetComponent<textController>().textChange(scoretext);
 	}
 
 

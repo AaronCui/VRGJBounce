@@ -34,14 +34,17 @@ public class trigger : MonoBehaviour {
         Vector3 crossp = Vector3.Cross(flatObjToCam.normalized, flatCamForward.normalized);
         float degree = Mathf.Asin(crossp.magnitude);
 
+		Debug.Log (camForward);
         //Debug.Log(degree + ", " + crossp);
-        if (degree >= DEGREE)
+		if (degree >= DEGREE || camForward.z <= 0)
         {
             seen = false;
+			Debug.Log ("out");
           
         }
         else
         {
+			Debug.Log("in");
             seen = true;
         }
 
@@ -49,6 +52,7 @@ public class trigger : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+	
         outDegree();
 		if ( seen )
 		{
@@ -56,7 +60,8 @@ public class trigger : MonoBehaviour {
 			//Debug.Log(dt);
 			if( dt >= TIMEMAX ){
 				//trigger certain event
-				Debug.Log("hi");
+				Debug.Log ("hi");
+				GetComponent<BallGenerator>().enabled = true;
 				dt = 0.0f;
 			}
 

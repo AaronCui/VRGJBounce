@@ -31,7 +31,7 @@ public class BallGenerator : MonoBehaviour {
 				counter = 0;
 			}
 		randomX = Random.Range (-2f, 2f);
-		randomZ = Random.Range (3f, 7f);
+		randomZ = Random.Range (15f, 30f);
 		randomY = Random.Range (0.5f, 5f);
 		randXtarget = Random.Range (-2f, 2f);
 		randZtarget = Random.Range (0.5f, 2f);
@@ -43,7 +43,7 @@ public class BallGenerator : MonoBehaviour {
 		scaler = -2f / direction.z;
 
 		GameObject Ball = (GameObject) Instantiate (tmp, spawnpt, transform.localRotation);
-		Ball.GetComponent<Rigidbody>().velocity = direction*(-2f);
+		Ball.GetComponent<Rigidbody>().velocity = direction*(-0.7f);
 		 
 		
 		}
